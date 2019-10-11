@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Playlist</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+<style>
+ * {
+    box-sizing: border-box;
+}
+
+#add-new-div {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+#tour-places-div{
+    /* display: block; */
+    display: none;
+}
+
+.add-new-title {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+/* Clear floats after the columns */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.col-lbl {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-txt {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.input-lbl {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+.input-txt {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-new-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+  
+.add-new-button:hover {
+    background-color: #0ae715;
+}
+
+.add-new-reset {
+    background-color: rgb(240, 93, 8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+.add-new-reset:hover { 
+    background-color: #e7870a;
+}
+
+.back:link, .back:visited {
+    display: block;
+    float: right;
+}
+
+.tablePlace {
+    font-family: "Trebuchet MS", "Arial", "Helvetica", "sans-serif";
+    margin:6px 6px;
+    width: 100%;
+    overflow-x:auto;
+}
+
+.tablePlace th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: black;
+    color: white;
+    margin: 2px 2px;
+}
+
+.tablePlace td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #f1d4bc
+}
+
+.colImage {
+  width:20%;
+  height: auto;
+}
+
+.backButton {
+    background-color: rgb(24, 10, 233);
+    color: white;
+    padding: 12px 12px;
+    margin: 6px 6px;
+}
+
+.backButton:hover {
+  background-color: rgb(15, 12, 65);
+}
+
+</style>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rhythm</title>
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- magnific CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/gijgo.min.css">
+    <!-- niceselect CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RHYTHM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../advice/advice.html">Career Advice
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio home.html">Playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../article/article.html">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../portfolio home/about.html">About</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="../promote/promote.html">Promote your music</a>
+          </li>
+		  <li class="nav-item">
+           <a class="nav-link" href="./contact/login.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!--::header part start::-->
+            
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="banner_text text-center">
+                        <div class="banner_text_iner">
+                            <h1>  Welcome!</h1>
+                            <p><b>Click here & get all your music sites at one place</b></p>
+                            <a href="../link/work.html" class="btn_1">Discover Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    
+    <!-- Header part end-->
+
+    <!--top place start-->
+    <section class="top_place section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="section_tittle text-center">
+                        <h2>My Favourites !!</h2>
+                        <p>Checkout my playlist....</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_place">
+                        <img src="img/com.jpg" alt="">
+                        <div class="hover_Text d-flex align-items-end justify-content-between">
+                            <div class="hover_text_iner">
+                                <a href="../playlist/shows.html" class="place_btn">playlist</a>
+                                <h3>Old is gold</h3>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_place">
+                        <img src="img/rock.jpg" alt="">
+                        <div class="hover_Text d-flex align-items-end justify-content-between">
+                            <div class="hover_text_iner">
+                                <a href="../playlist/list.html" class="place_btn">playlist</a>
+                                <h3>About Band Music</h3>
+                              
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_place">
+                        <img src="img/kpop.jpg" alt="">
+                        <div class="hover_Text d-flex align-items-end justify-content-between">
+                            <div class="hover_text_iner">
+                                <a href="../playlist/list.html" class="place_btn">playlist</a>
+                                <h3>About Korean Music</h3>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_place">
+                        <img src="img/article.jpg" alt="">
+                        <div class="hover_Text d-flex align-items-end justify-content-between">
+                            <div class="hover_text_iner">
+                                <a href="../playlist/list.html" class="place_btn">playlist</a>
+                                <h3>About Bollywood songs</h3>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <!--top place end-->
+
+        <div class="contact">
+        <h3>Leave a comment</h3>
+        <div class="alert">Your message has been sent, Redirecting to Home</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+		  <p>
+            <label>Comment</label>
+            <input type="text" name="message" id="message" required>
+          </p>
+         
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+  
+     
+	  <br>
+	  <br>
+	    
+		 <button class="add-new-message" id="con" style=:float:left" onclick="showTable()">Show Comments</button>
+		 
+       <table id="table">
+    <thead>
+	
+      <tr>
+        <td>name</td>
+        <td>comments</td>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+  </table>
+
+   <button class="add-new-reset" id="hide" style=:float:right" onclick="resetForm()"> Hide Comments</button>
+             
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+  
+  	<script src="mainss.js"></script>
+  
+   <script src="ad.js"></script>
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- magnific js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- masonry js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- masonry js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

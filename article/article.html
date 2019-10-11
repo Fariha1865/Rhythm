@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+  <title>Article</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+  </style>
+<style>
+ * {
+    box-sizing: border-box;
+}
+
+#add-new-div {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+#tour-places-div{
+    /* display: block; */
+    display: none;
+}
+
+.add-new-title {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+/* Clear floats after the columns */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.col-lbl {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-txt {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.input-lbl {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+.input-txt {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-new-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+  
+.add-new-button:hover {
+    background-color: #0ae715;
+}
+
+.add-new-reset {
+    background-color: rgb(240, 93, 8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+.add-new-reset:hover { 
+    background-color: #e7870a;
+}
+
+.back:link, .back:visited {
+    display: block;
+    float: right;
+}
+
+.tablePlace {
+    font-family: "Trebuchet MS", "Arial", "Helvetica", "sans-serif";
+    margin:6px 6px;
+    width: 100%;
+    overflow-x:auto;
+}
+
+.tablePlace th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: black;
+    color: white;
+    margin: 2px 2px;
+}
+
+.tablePlace td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #f1d4bc
+}
+
+.colImage {
+  width:20%;
+  height: auto;
+}
+
+.backButton {
+    background-color: rgb(24, 10, 233);
+    color: white;
+    padding: 12px 12px;
+    margin: 6px 6px;
+}
+
+.backButton:hover {
+  background-color: rgb(15, 12, 65);
+}
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+     <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RHYTHM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../advice/advice.html">Career Advice
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../download/portfolio home.html">Playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="article.html">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../portfolio home/about.html">About</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="../promote/promote.html">Promote your music</a>
+          </li>
+		  <li class="nav-item">
+           <a class="nav-link" href="./contact/login.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+    <div class="page">
+    
+    
+    <div id="colorlib-page">
+      <header>
+      	<div class="container">
+	        <div class="colorlib-navbar-brand">
+			   <br>
+              <br>
+	          <a class="colorlib-logo" href="index.html">Music<span>Articles</span></a>
+	        </div>
+	       
+        </div>
+      </header>
+
+			<section class="hero">
+				
+			  <div class="home-slider owl-carousel js-fullheight">
+		      <div class="slider-item =js-fullheight">
+		      	<div class="overlay"></div>
+		        <div class="container">
+		          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+		          	<div class="one-third order-md-last img" style="background-image:url(images/s.jpg);">
+		          		<div class="overlay"></div>
+		          	</div>
+			          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			          
+		    						<span class="ion-ios-play play"></span>
+		    					</a>
+			          	<div class="text">
+			          		<h2><a href="#">Music News</a></h2>
+			          		<span class="cat"></span>
+			          		<div class="my-5">
+			          			
+			          		</div>
+			          		
+			            </div>
+			          </div>
+		        	</div>
+		        </div>
+		      </div>
+
+		      <div class="slider-item js-fullheight">
+		      	<div class="overlay"></div>
+		        <div class="container">
+		          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+		          	<div class="one-third order-md-last img" style="background-image:url(images/j.jpg);">
+		          		<div class="overlay"></div>
+		          	</div>
+			          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			          	
+		    						<span class="ion-ios-play play"></span>
+		    					</a>
+			          	<div class="text">
+			          		<h2><a href="#">Recent<br> Articles</a></h2>
+			          		<span class="cat"></span>
+			          		<div class="my-5">
+			          			
+			          		</div>
+			          		
+			            </div>
+			          </div>
+		        	</div>
+		        </div>
+		      </div>
+
+		      <div class="slider-item js-fullheight">
+		      	<div class="overlay"></div>
+		        <div class="container">
+		          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+		          	<div class="one-third order-md-last img" style="background-image:url(images/m.jpg);">
+		          		<div class="overlay"></div>
+		          	</div>
+			          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			          	
+		    						<span class="ion-ios-play play"></span>
+		    					</a>
+			          	<div class="text">
+			          		<h2><a href="#">Current Updates</a></h2>
+			          		<span class="cat"></span>
+			          		<div class="my-5">
+			          			
+			          		</div>
+			          		
+			            </div>
+			          </div>
+		        	</div>
+		        </div>
+		      </div>
+
+		      <div class="slider-item js-fullheight">
+		      	<div class="overlay"></div>
+		        <div class="container">
+		          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+		          	<div class="one-third order-md-last img" style="background-image:url(images/d.jpg);">
+		          		<div class="overlay"></div>
+		          	</div>
+			          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			          	
+		    						<span class="ion-ios-play play"></span>
+		    					</a>
+			          	<div class="text">
+			          		<h2><a href="#">Trending music </a></h2>
+			          		
+			          		<div class="my-5">
+			          			
+			          		</div>
+			          		
+			            </div>
+			          </div>
+		        	</div>
+		        </div>
+		      </div>
+
+		      <div class="slider-item js-fullheight">
+		      	<div class="overlay"></div>
+		        <div class="container">
+		          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+		          	<div class="one-third order-md-last img" style="background-image:url(images/t.jpg);">
+		          		<div class="overlay"></div>
+		          	</div>
+			          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			          
+		    						<span class="ion-ios-play play"></span>
+		    					</a>
+			          	<div class="text">
+			          		<h2><a href="#">Toplist of songs</a></h2>
+			          		
+			          		<div class="my-5">
+			          			
+			          		</div>
+			          		
+			            </div>
+			          </div>
+		        	</div>
+		        </div>
+		      </div>
+		    </div>
+		  </section>
+
+	   
+
+      <!-- loader -->
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+      </div>
+    </div>
+
+     <section class="hero-wrap">
+      	<div class="overlay"></div>
+	      <div class="container-fluid px-0">
+	        <div class="row no-gutters text align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-12 ftco-animate text-center">
+	           
+	            <h1 class="bread">Best things to do is to read articles</h1>
+	          </div>
+	        </div>
+	      </div>
+      </section>
+
+	    <section class="ftco-section ftco-no-pt">
+	      <div class="container">
+	        <div class="row d-flex justify-content-center">
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry justify-content-end">
+	              <a href="https://www.bbc.co.uk/music/articles/322dc855-a05b-4d37-b55a-81195fd8c4ee"  target="_blank"class="block-20 img" style="background-image: url('images/a.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	                  
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">10 long-awaited albums that will be the soundtrack of 2019</a></h3>
+	                <p>The showbiz adage may be that you should always leave people wanting more, but some artists seem to want to test it more thoroughly than others, particularly when leaving people waiting for their next album to come out.</p>
+	             
+	
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry justify-content-end">
+	              <a href="https://www.bbc.co.uk/music/articles/523424bd-eae1-4fc7-bf17-56ece01a2a2f"  target="_blank"class="block-20 img" style="background-image: url('images/arr.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	                 
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">8 predictions for music in 2019 from expert pop forecasters</a></h3>
+	                <p>Before we find out the 2019 top five, we thought it would be a good idea to speak to some experts about what to expect from the year ahead in music as a whole.
+
+Here are some predictions of what we might see - according to a select number of recording artists, radio DJs and music journalists.</p>
+	               
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry">
+	              <a href="https://www.bbc.co.uk/music/articles/1823b000-10fb-48a7-ad03-3584b62c0d82"  target="_blank" class="block-20 img" style="background-image: url('images/arrr.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	                 
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">10 of the weirdest music news stories of the year</a></h3>
+	                <p>The world is getting weirder. If you want proof then look no further than the stories below, which suggest we might have slipped into an alternative reality where everything we know has been turned on its head. Surrealists rejoice! Here are 10 of the weirdest music news stories of 2018.</p>
+	              
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry justify-content-end">
+	              <a href="https://www.bbc.co.uk/music/articles/9ed63407-f6c6-4811-a2eb-9f52a8a4c1eb" target="_blank" class="block-20 img" style="background-image: url('images/ars.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	             
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">From meme to music fame: 7 of the most unexpected pop stars</a></h3>
+	                <p> It's too easy to dismiss memes as throwaway, ephemeral and meaningless. At their root, they're perfectly pure examples of pop culture and they have just as much worth in telling us something intriguing about the world we live in now as other, more-established types of expression.</p>
+	       
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry justify-content-end">
+	              <a href="https://www.bbc.co.uk/music/articles/77ce88c6-8686-4a8a-9c19-0d7860d81a63"  target="_blank"class="block-20 img" style="background-image: url('images/arg.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	                
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">Word up! Test your knowledge of these retro music terms</a></h3>
+	                <p>Many a strange slang term and genre has come and gone from music, and there are other music words still in use with origins that you may not expect. Swing on the flippity-flop with this funky quiz and see if you know your chillwave from your landfill indie...</p>
+	                
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-md-10 text-center d-flex ftco-animate">
+	          	<div class="blog-entry">
+	              <a href="https://www.bbc.co.uk/music/articles/e3fd740d-3a18-4b32-9320-31ba660725ec"  target="_blank"class="block-20 img" style="background-image: url('images/ah.jpg');">
+	              </a>
+	              <div class="text pt-4 px-md-5">
+	              	<div class="meta mb-3">
+	                  <div><a href="#">Aug 27, 2019</a></div>
+	                  <div><a href="#">Admin</a></div>
+	                
+	                </div>
+	                <h3 class="heading mt-2"><a href="#">5 music docs to watch and 5 to hear over Christmas</a></h3>
+	                <p> There's a dazzling array of music delights available to BBC viewers and listeners this Christmas - some new, some already online that you may have missed in recent weeks. So here's what to do: save this page for a quiet moment, and settle down with a music documentary. There are five to watch from the sofa, five to listen to while out and about.</p>
+	                
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	       
+	      </div>
+	    </section>
+	     <!-- /.container -->
+
+  
+      <div class="contact">
+        <h3>Leave a comment</h3>
+        <div class="alert">*</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+        
+          <p class="full">
+            <label>Comment</label>
+            <textarea name="comments" rows="3" id="comments"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+             
+
+ <br>
+	  <br>
+	    
+		 <button class="add-new-message" id="con" style=:float:left" onclick="showTable()">Show Comments</button>
+		 
+       <table id="table">
+    <thead>
+	
+      <tr>
+        <td>name</td>
+        <td>comments</td>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+  </table>
+
+   <button class="add-new-reset" id="hide" style=:float:right" onclick="resetForm()"> Hide Comments</button>
+                          
+  
+<br>
+	  <br>
+	  <br>
+	  <br>
+  
+    <footer class="py-3 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Musical Blog :Rhythm</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+    
+   
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+  
+  <script src="mainss.js"></script>
+  <script src="ad.js"></script>
+     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

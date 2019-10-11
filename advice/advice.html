@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+  </style>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Advice page</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+<style>
+ * {
+    box-sizing: border-box;
+}
+
+#add-new-div {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+#tour-places-div{
+    /* display: block; */
+    display: none;
+}
+
+.add-new-title {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+/* Clear floats after the columns */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.col-lbl {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-txt {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.input-lbl {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+.input-txt {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-new-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+  
+.add-new-button:hover {
+    background-color: #0ae715;
+}
+
+.add-new-reset {
+    background-color: rgb(240, 93, 8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px 6px;
+    width: 100px;
+}
+.add-new-reset:hover { 
+    background-color: #e7870a;
+}
+
+.back:link, .back:visited {
+    display: block;
+    float: right;
+}
+
+.tablePlace {
+    font-family: "Trebuchet MS", "Arial", "Helvetica", "sans-serif";
+    margin:6px 6px;
+    width: 100%;
+    overflow-x:auto;
+}
+
+.tablePlace th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: black;
+    color: white;
+    margin: 2px 2px;
+}
+
+.tablePlace td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #f1d4bc
+}
+
+.colImage {
+  width:20%;
+  height: auto;
+}
+
+.backButton {
+    background-color: rgb(24, 10, 233);
+    color: white;
+    padding: 12px 12px;
+    margin: 6px 6px;
+}
+
+.backButton:hover {
+  background-color: rgb(15, 12, 65);
+}
+
+</style>
+  
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+
+            <div class="col-9  text-right">
+              
+
+                           
+
+             
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="">RHYTHM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="advice.html">Career Advice
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../download/portfolio home.html">Playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../article/article.html">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../portfolio home/about.html">About</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="../promote/promote.html">Promote your music</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="../contact/login.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+            </div>
+
+            
+          </div>
+        </div>
+
+      </header>
+
+    <div class="ftco-blocks-cover-1">
+      <div class="site-section-cover overlay" style="background-image: url('advices.jpg')">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5" data-aos="fade-right">
+              <h1 class="mb-3 text-white">How to start</h1>
+              <p><h1>A Music Career !!</p>
+              <p class="d-flex align-items-center">
+                <a href="https://www.youtube.com/watch?v=lNnqYbjYv74" data-fancybox class="play-btn-39282 mr-3"><span class="icon-play"></span></a> 
+                <span class="small">Watch the video</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="heading-39101 mb-5">
+              
+         
+            </div>
+           <h1 class="login-heading mb-1">Get your suitable advice!</h1>
+             
+                <a class="btn btn-primary" href="../contact/login.html">Let's Talk</a>
+          </div>
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="advice.jpg" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7">
+            <div class="heading-39101 mb-5">
+              <span class="backdrop text-center">Proffesionals</span>
+              <span class="subtitle-39191">Advice</span>
+              <h3>Some top music career advice sites:</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="ems.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="https://insidemusicschools.com" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">Inside Music Schools</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="jack.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="https://tomhess.net/MusicCareerArticles.aspx" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">Tom Hess</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="tom.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="https://www.shaunletang.com/free-music-career-advice/" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">Shaun Letang</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="meh.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="https://www.musictech.net/music-career/" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">MusicTech</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="w.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="https://www.careersinmusic.com/blog/" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">CareerInMusic</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="com.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="http://blog.sonicbids.com" target="blank">Click here</a>
+                <h2 class="mb-1"><a href="trip-single.html">Sonicbids Blog</a></h2>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+     <!-- /.container -->
+
+  
+      <div class="contact">
+        <h3>Leave a comment</h3>
+        <div class="alert">Your message has been sent, Redirecting to Home</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+		  <p>
+            <label>Comment</label>
+            <input type="text" name="message" id="message" required>
+          </p>
+         
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+	  <br>
+	  <br>
+	    
+		 <button class="add-new-message" id="con" style=:float:left" onclick="showTable()">Show Comments</button>
+		 
+       <table id="table">
+    <thead>
+	
+      <tr>
+        <td>name</td>
+        <td>comments</td>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+  </table>
+
+   <button class="add-new-reset" id="hide" style=:float:right" onclick="resetForm()"> Hide Comments</button>
+     
+    
+	 
+	
+    
+  <!-- Bootstrap core JavaScript -->
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+	
+ 
+     <script src="mainss.js"></script>
+    <script src="ad.js"></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>
+

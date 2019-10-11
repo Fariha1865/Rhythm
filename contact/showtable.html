@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+  </style>
+</head>
+
+<body>
+
+ 
+  <table>
+    <thead>
+	
+      <tr>
+        <td>name</td>
+        <td>Email</td>
+		<td>subject</td>
+        <td>messages</td>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+  </table>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+
+  <script src="createTable.js"></script>
+
+</body>
+
+</html>
